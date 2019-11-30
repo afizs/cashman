@@ -15,6 +15,7 @@ while(True):
     print("3. Show All income")
     print("4. Show the Balance")
     print("5. Show all transactions")
+    print("6. Exit")
 
     choice = int(input())
 
@@ -31,10 +32,15 @@ while(True):
 
         transactions.append(transaction)
     elif choice ==2:
-        pass
+        for tran in transactions:
+            if tran['type_of'] == 'expense':
+                print(tran)
     elif choice ==3:
         pass
     elif  choice == 4:
         pass
-    else:
+    elif choice == 5:
         print(transactions)
+    else:
+        break
+        
